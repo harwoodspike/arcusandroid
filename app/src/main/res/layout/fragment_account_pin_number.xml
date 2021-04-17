@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Copyright 2019 Arcus Project.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorSurface">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/pin_pad_header_text"
+            style="@style/Widget.Arcus.TextAppearance.Body.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="@dimen/keyline_4"
+            tools:text="Header Text" />
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/keyline_2"
+            android:padding="@dimen/keyline_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/pin_number_1_circle"
+                style="@style/Widget.Arcus.ImageView.ItemRow.Darken.ImageOnly"
+                android:src="@drawable/sidemenu_settings_blackcircle"
+                android:adjustViewBounds="true"
+                android:layout_marginEnd="@dimen/keyline_2"
+                android:layout_width="@dimen/keyline_4"
+                android:layout_height="@dimen/keyline_4" />
+
+            <ImageView
+                android:id="@+id/pin_number_2_circle"
+                style="@style/Widget.Arcus.ImageView.ItemRow.Darken.ImageOnly"
+                android:src="@drawable/sidemenu_settings_blackcircle"
+                android:adjustViewBounds="true"
+                android:layout_marginEnd="@dimen/keyline_2"
+                android:layout_width="@dimen/keyline_4"
+                android:layout_height="@dimen/keyline_4" />
+
+            <ImageView
+                android:id="@+id/pin_number_3_circle"
+                style="@style/Widget.Arcus.ImageView.ItemRow.Darken.ImageOnly"
+                android:src="@drawable/sidemenu_settings_blackcircle"
+                android:adjustViewBounds="true"
+                android:layout_marginEnd="@dimen/keyline_2"
+                android:layout_width="@dimen/keyline_4"
+                android:layout_height="@dimen/keyline_4" />
+
+            <ImageView
+                android:id="@+id/pin_number_4_circle"
+                style="@style/Widget.Arcus.ImageView.ItemRow.Darken.ImageOnly"
+                android:src="@drawable/sidemenu_settings_blackcircle"
+                android:adjustViewBounds="true"
+                android:layout_width="@dimen/keyline_4"
+                android:layout_height="@dimen/keyline_4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/pin_number_pad_1"
+                    style="@style/Widget.Arcus.TextAppearance.Body.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/keyline_4"
+                    android:gravity="center"
+                    android:background="@drawable/sidemenu_settings_blackcircle"
+                    android:text="@string/number_one" />
+
+                <TextView
+                    android:id="@+id/pin_number_pad_2"
+                    style="@style/Widget.Arcus.TextAppearance.Body.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/keyline_4"
+                    android:gravity="center"
+                    android:background="@drawable/sidemenu_settings_blackcircle"
+                    android:text="@string/number_two" />
+
+                <TextView
+                    android:id="@+id/pin_number_pad_3"
+                    style="@style/Widget.Arcus.TextAppearance.Body.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/keyline_4"
+                    android:gravity="center"
+                    android:background="@drawable/sidemenu_settings_blackcircle"
+                    android:text="@string/number_three" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/pin_number_pad_4"
+                    style="@style/Widget.Arcus.TextAppearance.Body.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/keyline_4"
+                    android:gravity="center"
+                    android:background="@drawable/sidemenu_settings_blackcircle"
+                    android:text="@string/number_four" />
+
+                <TextView
+                    android:id="@+id/pin_number_pad_5"
+                    style="@style/Widget.Arcus.TextAppearance.Body.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/keyline_4"
+                    android:gravity="center"
+                    android:background="@drawable/sidemenu_settings_blackcircle"
+                    android:text="@string/number_five" />
+
+                <TextView
+                    android:id="@+id/pin_number_pad_6"
+                    style="@style/Widget.Arcus.TextAppearance.Body.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/keyline_4"
+                    android:gravity="center"
+                    android:background="@drawable/sidemenu_settings_blackcircle"
+                    android:text="@string/number_six" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/pin_number_pad_7"
+                    style="@style/Widget.Arcus.TextAppearance.Body.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/keyline_4"
+                    android:gravity="center"
+                    android:background="@drawable/sidemenu_settings_blackcircle"
+                    android:text="@string/number_seven" />
+
+                <TextView
+                    android:id="@+id/pin_number_pad_8"
+                    style="@style/Widget.Arcus.TextAppearance.Body.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/keyline_4"
+                    android:gravity="center"
+                    android:background="@drawable/sidemenu_settings_blackcircle"
+                    android:text="@string/number_eight" />
+
+                <TextView
+                    android:id="@+id/pin_number_pad_9"
+                    style="@style/Widget.Arcus.TextAppearance.Body.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/keyline_4"
+                    android:gravity="center"
+                    android:background="@drawable/sidemenu_settings_blackcircle"
+                    android:text="@string/number_nine" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Space
+                    android:layout_margin="@dimen/keyline_4"
+                    android:layout_width="49dp"
+                    android:layout_height="49dp" />
+
+                <TextView
+                    android:id="@+id/pin_number_pad_0"
+                    style="@style/Widget.Arcus.TextAppearance.Body.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/keyline_4"
+                    android:gravity="center"
+                    android:background="@drawable/sidemenu_settings_blackcircle"
+                    android:text="@string/zero" />
+
+                <ImageView
+                    android:id="@+id/pin_number_pad_backspace"
+                    style="@style/Widget.Arcus.ImageView.ItemRow.Darken.ImageOnly"
+                    android:layout_width="49dp"
+                    android:layout_height="49dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/keyline_4"
+                    android:gravity="center"
+                    android:src="@drawable/sidemenu_settings_delete" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2019 Arcus Project.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <include layout="@layout/photo_layout"/>
+
+        <TextView
+            android:id="@+id/account_settings_person_name"
+            style="@style/Widget.Arcus.TextAppearance.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/keyline_4"
+            android:layout_gravity="center"
+            android:gravity="center"
+            tools:text="First Name Last Name"
+            />
+
+        <View
+            style="@style/Widget.Arcus.Divider"
+            android:layout_marginTop="@dimen/keyline_5"
+            />
+
+        <TextView
+            android:id="@+id/contact_info_container"
+            style="@style/Widget.Arcus.TextAppearance.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/keyline_4"
+            android:drawablePadding="@dimen/keyline_2"
+            android:drawableEnd="@drawable/chevron"
+            android:text="@string/account_settings_contact_info"
+            />
+
+        <View
+            style="@style/Widget.Arcus.Divider"
+            android:layout_marginStart="@dimen/keyline_4"
+            />
+
+        <TextView
+            android:id="@+id/security_questions_container"
+            style="@style/Widget.Arcus.TextAppearance.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/keyline_4"
+            android:drawablePadding="@dimen/keyline_2"
+            android:drawableEnd="@drawable/chevron"
+            android:text="@string/account_settings_security"
+            />
+
+        <View
+            style="@style/Widget.Arcus.Divider"
+            android:layout_marginStart="@dimen/keyline_4"
+            />
+
+        <TextView
+            android:id="@+id/pin_code_container"
+            style="@style/Widget.Arcus.TextAppearance.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/keyline_4"
+            android:drawablePadding="@dimen/keyline_2"
+            android:drawableEnd="@drawable/chevron"
+            android:text="@string/change_pincode"
+            />
+
+        <View
+            style="@style/Widget.Arcus.Divider"
+            android:layout_marginStart="@dimen/keyline_4"
+            />
+
+        <TextView
+            android:id="@+id/fingerprint_container"
+            style="@style/Widget.Arcus.TextAppearance.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/keyline_4"
+            android:drawablePadding="@dimen/keyline_2"
+            android:drawableEnd="@drawable/chevron"
+            android:text="@string/fingerprint_title"
+            />
+
+        <View
+            style="@style/Widget.Arcus.Divider"
+            android:layout_marginStart="@dimen/keyline_4"
+            />
+
+        <TextView
+            android:id="@+id/push_notifications_container"
+            style="@style/Widget.Arcus.TextAppearance.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/keyline_4"
+            android:drawablePadding="@dimen/keyline_2"
+            android:drawableEnd="@drawable/chevron"
+            android:text="@string/account_settings_push_notifications"
+            />
+
+        <View
+            style="@style/Widget.Arcus.Divider"
+            android:layout_marginStart="@dimen/keyline_4"
+            />
+
+        <TextView
+            android:id="@+id/billing_container"
+            style="@style/Widget.Arcus.TextAppearance.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/keyline_4"
+            android:drawablePadding="@dimen/keyline_2"
+            android:drawableEnd="@drawable/chevron"
+            android:text="@string/account_settings_billing"
+            />
+
+        <View
+            style="@style/Widget.Arcus.Divider"
+            android:layout_marginStart="@dimen/keyline_4"
+            />
+
+        <TextView
+            android:id="@+id/marketing_container"
+            style="@style/Widget.Arcus.TextAppearance.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/keyline_4"
+            android:drawablePadding="@dimen/keyline_2"
+            android:drawableEnd="@drawable/chevron"
+            android:text="@string/account_settings_marketing"
+            />
+
+        <View
+            style="@style/Widget.Arcus.Divider"
+            android:layout_marginStart="@dimen/keyline_4"
+            />
+
+        <TextView
+            android:id="@+id/terms_container"
+            style="@style/Widget.Arcus.TextAppearance.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/keyline_4"
+            android:drawablePadding="@dimen/keyline_2"
+            android:drawableEnd="@drawable/chevron"
+            android:text="@string/terms_of_use"
+            />
+
+        <View
+            style="@style/Widget.Arcus.Divider"
+            android:layout_marginStart="@dimen/keyline_4"
+            />
+
+        <TextView
+            android:id="@+id/delete_container"
+            style="@style/Widget.Arcus.TextAppearance.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/keyline_4"
+            android:drawablePadding="@dimen/keyline_2"
+            android:drawableEnd="@drawable/chevron"
+            android:text="@string/delete_my_arcus_account"
+            />
+
+        <View
+            style="@style/Widget.Arcus.Divider"
+            android:layout_marginStart="@dimen/keyline_4"
+            />
+    </LinearLayout>
+
+</ScrollView>

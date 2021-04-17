@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2019 Arcus Project.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/top_remove_text"
+                style="@style/Widget.Arcus.TextAppearance.Body.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/keyline_5"
+                android:gravity="center"
+                tools:text="Top text here." />
+
+            <View
+                style="@style/Widget.Arcus.Divider"
+                android:layout_marginBottom="@dimen/keyline_2"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/remove_text_entry_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/keyline_2"
+                tools:hint="Input Text Hint">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/remove_text_entry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/keyline_4"
+                    android:layout_marginEnd="@dimen/keyline_4"
+                    android:inputType="textCapWords"
+                    android:imeOptions="actionDone"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/bottom_remove_text"
+                style="@style/Widget.Arcus.TextAppearance.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_margin="@dimen/keyline_5"
+                android:gravity="center"
+                tools:text="Bottom Remove Text"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="bottom">
+        <Button
+            android:id="@+id/fragment_remove_btn"
+            style="@style/Widget.Arcus.Button.Purple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_margin="@dimen/keyline_4"
+            android:text="@string/account_registration_login_submit_btn" />
+    </LinearLayout>
+
+</LinearLayout>

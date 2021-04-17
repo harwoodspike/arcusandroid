@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2019 Arcus Project.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/purple_gradient"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_checkmark"
+        android:background="@drawable/circle_hollow_white"
+        android:contentDescription="@string/dashboard_arcus"
+        android:tint="@color/white"
+        android:padding="15dp"
+        android:layout_marginTop="@dimen/keyline_5"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:text="@string/update_needed"
+        style="@style/Widget.Arcus.TextAppearance.Body.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/keyline_5"
+        android:textAllCaps="true"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/made_changes_copy"
+        style="@style/Widget.Arcus.TextAppearance.Body.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textColorLink="@color/white_with_60"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/keyline_5"
+        android:layout_marginLeft="@dimen/keyline_4"
+        android:layout_marginRight="@dimen/keyline_4"
+        tools:text="@string/made_some_changes_with_placeholders" />
+
+    <TextView
+        style="@style/Widget.Arcus.TextAppearance.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_with_60"
+        android:layout_marginTop="@dimen/keyline_5"
+        android:layout_marginLeft="@dimen/keyline_4"
+        android:layout_marginRight="@dimen/keyline_4"
+        android:gravity="center"
+        android:text="@string/read_both_and_click_accept" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/click_accept_copy"
+                style="@style/Widget.Arcus.TextAppearance.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_with_60"
+                android:layout_marginBottom="@dimen/keyline_5"
+                android:layout_marginLeft="@dimen/keyline_4"
+                android:layout_marginRight="@dimen/keyline_4"
+                tools:text="@string/clicking_accept_agree"
+                android:textColorLink="@color/white"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/terms_accept_button"
+                style="@style/Widget.Arcus.Button.White.BlueText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/accept"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/keyline_4"
+                android:layout_marginLeft="@dimen/keyline_4"
+                android:layout_marginRight="@dimen/keyline_4" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

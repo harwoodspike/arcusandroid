@@ -1,0 +1,81 @@
+apply from: 'common.gradle'
+
+project.ext.shortVersion = "${version_major}.${version_minor}.${version_patch}"
+project.ext.appVersionCode  = "${version_major}${version_minor}${version_patch}" as Integer
+
+buildscript {
+    apply from: 'dependencies.gradle'
+
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+
+    dependencies {
+        classpath deps.classpath.gradleTools
+        classpath deps.classpath.kotlin
+        classpath deps.classpath.ktlintPlugin
+    }
+}
+
+subprojects {
+    afterEvaluate {
+        def plugins = project.plugins
+        String library = "com.android.library"
+        String application = "com.android.application"
+        ktlint {
+            android = plugins.hasPlugin(library) || plugins.hasPlugin(application)
+        }
+    }
+    apply plugin: "org.jlleitschuh.gradle.ktlint"
+
+    ktlint {
+        version = "$ktlintVersion"
+        debug = false
+        verbose = true
+        outputToConsole = true
+        outputColorName = "RED"
+        ignoreFailures = false
+        disabledRules = [
+        ]
+
+        filter {
+            exclude("**/generated/**")
+        }
+    }
+}
+
+allprojects {
+    if (Boolean.parseBoolean("${use_lint_checks}")) {
+        gradle.projectsEvaluated {
+            tasks.withType(JavaCompile) {
+                options.compilerArgs << "-Xlint"
+            }
+        }
+    }
+
+    // Plugins
+    repositories {
+        google()
+        jcenter()
+
+        if (Boolean.parseBoolean("${android_use_maven_local}")) {
+            mavenLocal()
+        }
+    }
+
+    // Dependencies
+    buildscript {
+        repositories {
+            google()
+            jcenter()
+
+            if (Boolean.parseBoolean("${android_use_maven_local}")) {
+                mavenLocal()
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2019 Arcus Project.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/keyline_4"
+    tools:context="arcus.app.activities.InvitationActivity"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Widget.Arcus.TextAppearance.Body.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/keyline_4"
+        android:text="@string/invitation_invite_title"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/login_email"
+        android:layout_marginTop="@dimen/keyline_4"
+        android:layout_below="@id/title"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEntry"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@id/invitationCodeEntry"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/invitationCodeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/invitation_code"
+        android:layout_marginTop="@dimen/keyline_4"
+        android:layout_below="@id/emailContainer"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/invitationCodeEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/bottom_description"
+        style="@style/Widget.Arcus.TextAppearance.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_above="@+id/btnNext"
+        android:layout_marginBottom="@dimen/keyline_4"
+        android:text="@string/invitation_invite_bottom"
+        />
+
+    <Button
+        android:id="@id/btnNext"
+        style="@style/Widget.Arcus.Button.Purple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/pairing_next"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2019 Arcus Project.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Widget.Arcus.TextAppearance.Body.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/manage_push_notifications" />
+
+        <LinearLayout
+            android:id="@+id/mobileNotificationsInfoContainer"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/mobile_notifications_info"
+                style="@style/Widget.Arcus.ImageView.ItemRow.Darken"
+                android:contentDescription="@string/type_mobile"
+                android:src="@drawable/white_info"
+                android:layout_marginBottom="@dimen/keyline_4"
+                android:layout_marginTop="@dimen/keyline_2"
+                android:layout_marginEnd="@dimen/keyline_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/Widget.Arcus.TextAppearance.Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/keyline_4"
+                android:layout_marginTop="@dimen/keyline_2"
+                android:text="@string/manage_push_notifications_desc" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/currentDeviceSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <View style="@style/Widget.Arcus.Divider" />
+
+            <include layout="@layout/cell_mobile_device" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/otherDevicesSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="75dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:background="@color/white_with_30">
+
+                <TextView
+                    style="@style/Widget.Arcus.TextAppearance.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/keyline_5"
+                    android:layout_marginStart="@dimen/keyline_2"
+                    android:gravity="center_vertical"
+                    android:text="@string/other_devices"
+                    android:textColor="@color/white"
+                    tools:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/mobileDeviceList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:divider="@null"
+                tools:listitem="@layout/cell_mobile_device"
+                tools:listItemCount="3" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/Widget.Arcus.Divider"
+        android:layout_above="@+id/bottom_text" />
+
+    <TextView
+        android:id="@+id/bottom_text"
+        style="@style/Widget.Arcus.TextAppearance.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/keyline_2"
+        android:layout_marginBottom="@dimen/keyline_4"
+        android:gravity="center"
+        android:text="@string/turn_off_push_notifications" />
+
+</RelativeLayout>
